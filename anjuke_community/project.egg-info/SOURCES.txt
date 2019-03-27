@@ -1,0 +1,14 @@
+setup.py
+anjuke_community/__init__.py
+anjuke_community/items.py
+anjuke_community/main.py
+anjuke_community/middlewares.py
+anjuke_community/pipelines.py
+anjuke_community/settings.py
+anjuke_community/spiders/__init__.py
+anjuke_community/spiders/community_spider.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
