@@ -11,5 +11,6 @@ def start_dataspider():
 
 
 if __name__ == '__main__':
-    start_urlspider()
-    start_dataspider()
+    pass
+    # start_urlspider()
+    # start_dataspider()
