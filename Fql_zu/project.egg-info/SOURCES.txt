@@ -1,0 +1,16 @@
+setup.py
+Fql_zu/__init__.py
+Fql_zu/items.py
+Fql_zu/middlewares.py
+Fql_zu/pipelines.py
+Fql_zu/settings.py
+Fql_zu/model/__init__.py
+Fql_zu/model/to_md5.py
+Fql_zu/spiders/__init__.py
+Fql_zu/spiders/shop_spdier.py
+Fql_zu/spiders/url_spider.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt

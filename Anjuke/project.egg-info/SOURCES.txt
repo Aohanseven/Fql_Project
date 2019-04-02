@@ -1,0 +1,14 @@
+setup.py
+Anjuke/__init__.py
+Anjuke/items.py
+Anjuke/middlewares.py
+Anjuke/pipelines.py
+Anjuke/settings.py
+Anjuke/spiders/__init__.py
+Anjuke/spiders/shop_spdier.py
+Anjuke/spiders/url_spider.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt

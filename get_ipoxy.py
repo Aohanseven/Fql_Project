@@ -16,10 +16,10 @@ def get_ip():
             if ip != 'too many requests':
                 redis_db.setex(ip, 30, 0)
         print(ips)
-        if time.localtime(time.time()).tm_hour == 21:
-            a = os.kill(pid,signal.SIGKILL)
-            print('已杀死pid为%s的进程,　返回值是:%s' % (pid, a))
-        time.sleep(6)
+        # if time.localtime(time.time()).tm_hour == 21:
+        #     a = os.kill(pid,signal.SIGKILL)
+        #     print('已杀死pid为%s的进程,　返回值是:%s' % (pid, a))
+        time.sleep(10)
 
 
 if __name__ == '__main__':
