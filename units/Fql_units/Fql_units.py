@@ -11,10 +11,14 @@ def get_web():
 def login():
     browser = webdriver.Chrome('C:/Users/Administrator/Downloads/chromedriver.exe')
     browser.get('http://fangqianli.com')
-    browser.find_elements_by_xpath('//*[@id="DengL"]').click()
-    browser.find_elements_by_xpath('//*[@id="username"]').send_keys('16608940910')
-    browser.find_elements_by_xpath('//*[@id="psw"]').send_keys('a2577811')
-    browser.find_elements_by_xpath('//*[@id="loginbtn"]').click()
+    browser.find_element_by_xpath('//*[@id="DengL"]').click()
+    time.sleep(1)
+    browser.find_element_by_xpath('//*[@id="username"]').send_keys('16608940910')
+    time.sleep(1)
+    browser.find_element_by_xpath('//*[@id="psw"]').send_keys('a2577811')
+    time.sleep(1)
+    browser.find_element_by_xpath('//*[@id="loginbtn"]').click()
+    time.sleep(1)
     username = browser.find_elements_by_xpath('//*[@id="DengL"]/text()')
     return username
 
