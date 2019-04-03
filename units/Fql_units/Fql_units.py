@@ -29,7 +29,7 @@ class TestFql(unittest.TestCase):
         self.assertEqual(200, get_web())
 
     def test_login(self):
-        self.assertEqual('16608940910', login())
+        self.assertEqual('1660894090', login())
 
 if __name__=='__main__':
     unittest.main()
