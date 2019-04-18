@@ -3,8 +3,10 @@ import pandas as pd
 from math import *
 
 
-con = pymysql.connect(host = '192.168.0.252', user = 'web_user' ,db='FBDdata2', password = 'first2018pl,',port =3306,charset='utf8')
+con = pymysql.connect(host='192.168.0.252', user='web_user', db='FBDdata2', password='first2018pl,', port=3306, charset='utf8')
 cur = con.cursor()
+
+
 def get_dis(lon1, lat1, lon2, lat2, distance):  # 经度1，纬度1，经度2，纬度2 （十进制度数）
     """
     Calculate the great circle distance between two points 
@@ -80,5 +82,7 @@ def get_storelist1():
             print('sucess id(%s)' % store_id)
             con.commit()
         con.close()
+
+
 if __name__ == "__main__":
     get_storelist1()

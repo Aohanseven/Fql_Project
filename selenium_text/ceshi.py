@@ -12,7 +12,7 @@ con = pymysql.connect(
     cursorclass=pymysql.cursors.DictCursor
 )
 
-r = redis.Redis(host='localhost', port=6379, db=0)
+r = redis.Redis(host='localhost', port=6379)
 redis_data_dict_1 = "unused_id"
 sql = "SELECT id FROM fbd_store"
 df = pd.read_sql(sql, con)
