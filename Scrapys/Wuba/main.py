@@ -9,5 +9,9 @@ def start_dataspdier():
     execute(["scrapy","crawl","data_spider"])
 
 
+def start_agentspider():
+    execute(["scrapy","crawl","agent_spider"])
+
+
 if __name__ == "__main__":
-    start_dataspdier()
+    start_agentspider()

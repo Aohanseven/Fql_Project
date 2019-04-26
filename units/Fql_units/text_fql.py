@@ -105,7 +105,7 @@ class TestFql(unittest.TestCase):
     def setUp(self):
         self.opt = webdriver.ChromeOptions()
         self.opt.set_headless()
-        self.browser = webdriver.Chrome('C:/Users/Administrator/Downloads/chromedriver.exe',options=self.opt)
+        self.browser = webdriver.Chrome('C:/Users/Administrator/Downloads/chromedriver.exe')
         self.browser.implicitly_wait(30)  # 隐性等待时间为30秒
         self.browser.get('http://fangqianli.com')
 
@@ -135,4 +135,4 @@ if __name__ == "__main__":
     if msg != []:
         content = ','.join(msg)
         token = get_token()
-        send_msg(token,content)
+        send_msg(token, content)

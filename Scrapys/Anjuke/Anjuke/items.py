@@ -17,7 +17,7 @@ class UrlItem(scrapy.Item):
 class ShopsSpiderItem(scrapy.Item):
     id = scrapy.Field()
     monthly_rent = scrapy.Field()
-    transfer_fee= scrapy.Field()
+    transfer_fee = scrapy.Field()
     property_fee = scrapy.Field()
     acreage = scrapy.Field()
     width = scrapy.Field()
@@ -35,3 +35,9 @@ class ShopsSpiderItem(scrapy.Item):
     is_ok = scrapy.Field()
     content = scrapy.Field()
     business_industry = scrapy.Field()
+
+
+class AgentItem(scrapy.Item):
+    agent_name = scrapy.Field()
+    agent_phone = scrapy.Field()
+    agent_company = scrapy.Field()

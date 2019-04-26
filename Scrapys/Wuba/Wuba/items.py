@@ -36,3 +36,9 @@ class Data58ShopItem(scrapy.Item):
     lng = scrapy.Field()
     is_ok = scrapy.Field()
     content = scrapy.Field()
+
+
+class AgentItem(scrapy.Item):
+    agent_name = scrapy.Field()
+    agent_phone = scrapy.Field()
+    agent_company = scrapy.Field()
