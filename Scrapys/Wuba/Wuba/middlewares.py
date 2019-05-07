@@ -6,8 +6,8 @@
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
+from fake_useragent import UserAgent
 import redis
-import random
 
 class WubaSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
@@ -118,24 +118,3 @@ class ProxyMiddleware(object):
             request.meta["proxy"] = 'https://' + ip
             print('当前使用ip为%s' % ip)
 
-
-class MyUserAgentMiddleware(object):
-    def __init__(self):
-        self.user_agent_list = [
-            'MSIE (MSIE 6.0; X11; Linux; i686) Opera 7.23',
-            'Opera/9.20 (Macintosh; Intel Mac OS X; U; en)',
-            'Opera/9.0 (Macintosh; PPC Mac OS X; U; en)',
-            'iTunes/9.0.3 (Macintosh; U; Intel Mac OS X 10_6_2; en-ca)',
-            'Mozilla/4.76 [en_jp] (X11; U; SunOS 5.8 sun4u)',
-            'iTunes/4.2 (Macintosh; U; PPC Mac OS X 10.2)',
-            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:5.0) Gecko/20100101 Firefox/5.0',
-            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:9.0) Gecko/20100101 Firefox/9.0',
-            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20120813 Firefox/16.0',
-            'Mozilla/4.77 [en] (X11; I; IRIX;64 6.5 IP30)',
-            'Mozilla/4.8 [en] (X11; U; SunOS; 5.7 sun4u)'
-        ]
-
-    def process_request(self,request,spider):
-        user_agent = random.choice(self.user_agent_list)
-        request.headers['USER_AGENT']=user_agent
-        print('当前使用的User-agen''t为%s' % user_agent)

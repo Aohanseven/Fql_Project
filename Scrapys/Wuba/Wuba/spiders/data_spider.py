@@ -11,7 +11,8 @@ class Data58ShopSpider(scrapy.Spider):
     custom_settings = {
         'DOWNLOADER_MIDDLEWARES': {
             'Wuba.middlewares.ProxyMiddleware': 200,
-            'Wuba.middlewares.MyUserAgentMiddleware': 300,
+            'scrapy_fake_useragent.middleware.RandomUserAgentMiddleware': 300,
+            'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
         },
         'ITEM_PIPELINES': {
             'Wuba.pipelines.DATADBPipeline': 300
@@ -57,8 +58,10 @@ class Data58ShopSpider(scrapy.Spider):
                 norms = response.xpath(
                     '/html/body/div[4]/div[2]/div[2]/ul/li[2]/span[4]/text()').extract_first().strip()
                 if norms != '暂无':
-                    re_norms = re.search(r'面宽(.*?)m.*?进深(.*?)m.*?层高(.*?)m.*?', norms)
-                    item['width'], item['depth'], item['height'] = re_norms.group(1), re_norms.group(2), re_norms.group(3)
+                    re_norms = re.search(
+                        r'面宽(.*?)m.*?进深(.*?)m.*?层高(.*?)m.*?', norms)
+                    item['width'], item['depth'], item['height'] = re_norms.group(
+                        1), re_norms.group(2), re_norms.group(3)
                 else:
                     item['width'], item['depth'], item['height'] = 0, 0, 0
 
@@ -79,14 +82,17 @@ class Data58ShopSpider(scrapy.Spider):
                     '/html/body/div[4]/div[2]/div[2]/ul/li[4]/span[4]/text()').extract_first().strip()
 
                 address = []
-                address1 = response.xpath('/html/body/div[4]/div[2]/div[2]/ul/li[6]/a[1]/text()').extract_first()
-                address2 = response.xpath('/html/body/div[4]/div[2]/div[2]/ul/li[6]/a[2]/text()').extract_first()
-                address3 = response.xpath('/html/body/div[4]/div[2]/div[2]/ul/li[6]/span[2]/text()').extract_first().strip().replace('\xa0', '')
-                if address1 != None:
+                address1 = response.xpath(
+                    '/html/body/div[4]/div[2]/div[2]/ul/li[6]/a[1]/text()').extract_first()
+                address2 = response.xpath(
+                    '/html/body/div[4]/div[2]/div[2]/ul/li[6]/a[2]/text()').extract_first()
+                address3 = response.xpath(
+                    '/html/body/div[4]/div[2]/div[2]/ul/li[6]/span[2]/text()').extract_first().strip().replace('\xa0', '')
+                if address1 is not None:
                     address.append(address1)
-                if address2 != None:
+                if address2 is not None:
                     address.append(address2)
-                if address3 != None:
+                if address3 is not None:
                     address.append(address3)
                 item['address'] = ','.join(address)
 
@@ -102,9 +108,40 @@ class Data58ShopSpider(scrapy.Spider):
                     item['lng'] = ''
                 content = response.xpath('//*[@id="generalSound"]')
                 item['content'] = content.xpath('string(.)').extract()[0].replace(
-                    ' ', '').replace('\n', '').replace('\t', '').replace('\xa0', '')
+                    ' ',
+                    '').replace(
+                    '\n',
+                    '').replace(
+                    '\t',
+                    '').replace(
+                    '\xa0',
+                    '')
+                yield item
+            else:
+                item['id'] = re.search(
+                    'http(s)*://cd.58.com/shangpu/(.*)x.shtml',
+                    response.url).group(2)
+                item['is_ok'] = '2'
+                item['monthly_rent'] = ''
+                item['acreage'] = ''
+                item['width'] = ''
+                item['address'] = ''
+                item['depth'] = ''
+                item['height'] = ''
+                item['floor'] = ''
+                item['shop_type'] = ''
+                item['store_status'] = ''
+                item['business_industry'] = ''
+                item['payment_method'] = ''
+                item['lease_mode'] = ''
+                item['lat'] = ''
+                item['lng'] = ''
+                item['content'] = ''
                 yield item
         else:
+            item['id'] = re.search(
+                'http(s)*://cd.58.com/shangpu/(.*)x.shtml',
+                response.url).group(2)
             item['is_ok'] = '2'
             item['monthly_rent'] = ''
             item['acreage'] = ''

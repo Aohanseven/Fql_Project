@@ -9,7 +9,8 @@ class Shop58UrlSpider(scrapy.Spider):
     custom_settings = {
          'DOWNLOADER_MIDDLEWARES' : {
             'Wuba.middlewares.ProxyMiddleware': 200,
-             'Wuba.middlewares.MyUserAgentMiddleware': 300,
+             'scrapy_fake_useragent.middleware.RandomUserAgentMiddleware': 300,
+             'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None
 
          },
         "ITEM_PIPELINES": {
