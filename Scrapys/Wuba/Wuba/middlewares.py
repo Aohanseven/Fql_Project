@@ -103,6 +103,7 @@ class WubaDownloaderMiddleware(object):
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
 
+
 class ProxyMiddleware(object):
     def __init__(self):
         self.redis_db = redis.Redis(host='127.0.0.1', port=6379, db=9)
@@ -111,7 +112,7 @@ class ProxyMiddleware(object):
         ip = bytes.decode(self.redis_db.randomkey())
 
         if request.url.startswith('http://'):
-            request.meta["proxy"] = 'http://'+ ip
+            request.meta["proxy"] = 'http://' + ip
             print('当前使用ip为%s' % ip)
         else:
             request.meta["proxy"] = 'https://' + ip

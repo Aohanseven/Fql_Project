@@ -40,102 +40,72 @@ class ShopSpdierSpider(scrapy.Spider):
             yield scrapy.Request(link, callback=self.parse, dont_filter=True, meta={'handle_httpstatus_all': True})
 
     def parse(self, response):
-        # self.logger.debug("(parse_page) response: status=%d, URL=%s" % (response.status, response.url))
-        # if response.status in (302,) and 'Location' in response.headers:
-        #     self.logger.debug("(parse_page) Location header: %r" % response.headers['Location'])
-        #     yield scrapy.Request(
-        #         response.urljoin(response.headers['Location']),
-        #         callback=self.parse)]
-
         item = ShopsSpiderItem()
         if response.status == 200:
             item['is_ok'] = '1'
+
             item['id'] = re.search(
-                'https://cd.sp.anjuke.com/zu/(.*?)/',
+                'http://cd.sp.anjuke.com/zu/(.*?)/.*',
                 response.url).group(1)
-            monthly_rent = re.findall(
-                r'<span\s*class="fst">月租：</span>\s*<span\s*class="desc">(.*?)</span>',
-                response.text)[0]
+
+            monthly_rent = response.xpath(
+                '//*[@id="fy_info"]/ul[1]/li[1]/span[3]/text()').extract_first()
             if re.search(r'元', monthly_rent):
                 item['monthly_rent'] = re.search(
                     r'(\d*)', monthly_rent).group(1)
             else:
                 item['monthly_rent'] = int(
                     re.search(r'(\d*)', monthly_rent).group(1)) * 10000
-            item['transfer_fee'] = re.findall(
-                r'<span\s*class="fst">转让费：</span>\s*<span\s*class="desc">(.*?)</span>',
-                response.text)[0]
-            item['property_fee'] = re.findall(
-                r'<span\s*class="fst">物业费：</span>\s*<span\s*class="desc">(.*?)</span>',
-                response.text)[0]
-            acreage = re.findall(
-                r'<span\s*class="fst">面积：</span>\s*<span\s*class="desc">(.*?)</span>',
-                response.text)[0]
-            item['acreage'] = re.search(r'(\d*)', acreage).group(1)
-            item['width'] = re.findall(
-                r'<span\s*class="fst">面宽：</span>\s*<span\s*class="desc">(.*?)m</span>',
-                response.text)[0]
-            item['height'] = re.findall(
-                r'<span\s*class="fst">层高：</span>\s*<span\s*class="desc">(.*?)m</span>',
-                response.text)[0]
-            if re.findall(
-                r'<span\s*class="fst">进深：</span>\s*<span\s*class="desc">(.*?)m</span>',
-                    response.text):
-                item['depth'] = re.findall(
-                    r'<span\s*class="fst">进深：</span>\s*<span\s*class="desc">(.*?)m</span>',
-                    response.text)[0]
-            else:
-                item['depth'] = ''
-            item['floor'] = re.findall(
-                r'<span\s*class="fst">楼层：</span>\s*<span\s*class="desc">(.*?)</span>',
-                response.text)[0]
-            store_status = re.findall(
-                r'<span\s*class="fst">状态：</span>\s*<span\s*class="desc"\s*title="(.*?)">.*</span>',
-                response.text)[0]
-            if re.search('空铺', store_status) is not None:
-                item['store_status'] = '空铺出租/转让'
-            elif re.search('营业中', store_status) is not None:
-                item['store_status'] = '营业中'
-            if re.search('<b>(.*?)</b>', store_status) is not None:
-                item['business_industry'] = re.search(
-                    '<b>(.*?)</b>', store_status).group(1)
-            else:
-                item['business_industry'] = ''
-            # store_status = re.findall(r'(.*?), 之前为', re.findall(r'<span\s*class="fst">状态：</span>\s*<span\s*class="desc"\s*title="(.*?)">.*</span>', response.text)[0])
-            # if store_status != []:
-            #     item['store_status'] = store_status[0]
-            # else:
-            #     item['store_status'] = re.findall(r'<span\s*class="fst">状态：</span>\s*<span\s*class="desc"\s*title="(.*?)">.*</span>',response.text)[0]
-            if re.findall(
-                r'<span\s*class="fst">起租期：</span>\s*<span\s*class="desc">(.*?)</span>',
-                    response.text):
-                item['lease_term'] = re.findall(
-                    r'<span\s*class="fst">起租期：</span>\s*<span\s*class="desc">(.*?)</span>',
-                    response.text)[0]
-            else:
-                item['lease_term'] = ''
-            item['people'] = re.findall(
-                r'<span\s*class="fst">人群：</span>\s*<span\s*class="desc"\s*title="(.*?)">.*',
-                response.text)[0]
-            item['payment_method'] = re.findall(
-                r'<span\s*class="fst">押付：</span>\s*<span\s*class="desc">(.*?)</span>',
-                response.text)[0]
-            item['address'] = re.findall(
-                r'<span\s*class="fst">地址：</span>\s*<span\s*class="desc addresscommu"\s*title=".*">\s*(.*?)\s*</span>',
-                response.text)[0].replace(
-                '                    ',
-                ',')
-            item['is_facestreet'] = re.findall(
-                r'<span\s*class="fst">是否临街：</span>\s*<span\s*class="desc">(.*?)</span>',
-                response.text)[0]
+
+            item['payment_method'] = response.xpath(
+                '//*[@id="fy_info"]/ul[1]/li[2]/span[3]/text()').extract_first().strip()
+
+            item['lease_term'] = response.xpath(
+                '//*[@id="fy_info"]/ul[1]/li[3]/span[3]/text()').extract_first().strip()
+
+            item['floor'] = response.xpath(
+                '//*[@id="fy_info"]/ul[1]/li[4]/span[3]/text()').extract_first().strip()
+
+            norms = re.findall('\d*m', response.xpath(
+                '//*[@id="fy_info"]/ul[1]/li[5]/span[3]/text()').extract_first().strip())
+
+            item['width'] = norms[0].strip('m')
+
+            item['height'] = norms[1].strip('m')
+
+            item['depth'] = norms[2].strip('m')
+
+            item['address'] = response.xpath(
+                '//*[@id="fy_info"]/ul[1]/li[7]/span[3]/text()').extract_first().replace('\n', '').strip('  ').replace(' ', ',')
+
+
+            item['store_status'] = response.xpath(
+                '//*[@id="fy_info"]/ul[2]/li[4]/span[3]/text()').extract_first().strip()
+
+            shop_type = response.xpath(
+                '//*[@id="fy_info"]/ul[2]/li[3]/span[3]/text()').extract_first().split('-')
+
+            item['business_industry'] = shop_type[0]
+
+            item['is_facestreet'] = shop_type[1]
+
+            item['people'] = response.xpath(
+                '//*[@id="fy_info"]/ul[2]/li[6]/span[3]/text()').extract_first().strip()
+
             item['lat'] = re.findall(r'lat\s*:\s*"(.*?)"', response.text)[0]
+
             item['lng'] = re.findall(r'lng\s*:\s*"(.*?)"', response.text)[0]
+
             data = response.xpath('//*[@id="xzl_desc"]/div')
-            item['content'] = data.xpath('string(.)').extract()[0].replace(
-                ' ', '').replace(
-                '\n', '').replace(
-                '\t', '')
-            # item['matching'] =','.join(re.findall(r'<li\sclass="">\s*<i class=".*"></i>\s*<p>(.*?)</p>',response.text))
+
+            item['content'] = data.xpath('string(.)').extract()[0].replace(' ', '').replace('\n', '').replace('\t', '')
+
+            item['transfer_fee'] = '面议'
+
+            item['property_fee'] = '面议'
+
+            item['acreage'] = response.xpath(
+                '//*[@id="fy_info"]/ul[2]/li[1]/span[3]/text()').extract_first().strip('m²')
             yield item
         elif response.status == 404:
             item['is_ok'] = '2'

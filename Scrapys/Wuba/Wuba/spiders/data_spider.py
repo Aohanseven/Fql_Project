@@ -9,17 +9,22 @@ import re
 class Data58ShopSpider(scrapy.Spider):
     name = 'data_spider'
     custom_settings = {
-        'DOWNLOADER_MIDDLEWARES' : {
+        'DOWNLOADER_MIDDLEWARES': {
             'Wuba.middlewares.ProxyMiddleware': 200,
             'Wuba.middlewares.MyUserAgentMiddleware': 300,
-         },
+        },
         'ITEM_PIPELINES': {
             'Wuba.pipelines.DATADBPipeline': 300
         }
 
     }
-    conn = pymysql.connect(host='192.168.0.252', user='web_user', passwd='first2018pl,', db='FBDdata2', charset='utf8',
-                          port=3306)
+    conn = pymysql.connect(
+        host='192.168.0.252',
+        user='web_user',
+        passwd='first2018pl,',
+        db='FBDdata2',
+        charset='utf8',
+        port=3306)
 
     def start_requests(self):
         sql = "SELECT link FROM shop58_data WHERE is_ok = '0' "
@@ -29,57 +34,77 @@ class Data58ShopSpider(scrapy.Spider):
 
     def parse(self, response):
         item = Data58ShopItem()
-        try:
-            item['is_ok'] = '1'
-            item['id'] = re.search('http(s)*://cd.58.com/shangpu/(.*)x.shtml',response.url).group(2)
-            item['monthly_rent'] = re.search('<span\sclass="house_basic_title_money_num">(.*?)</span>',response.text).group(1)
-            acreage= re.search('<span\sclass="house_basic_title_content_item1">房屋面积:</span>\s*<span\sclass="house_basic_title_content_item2">(.*?)</span>',response.text).group(1)
-            item['acreage'] = re.search(r'(\d*)',acreage).group(1)
-            item['width'] = re.search('宽:</span>\s*<span class="house_basic_title_content_item2">\s(.*?)m\s</span>',response.text).group(1)
-            if re.search('onclick="clickLog\(\'from=fcpc_shangpu_detail_jichuxinxi@name=1\'\)"\starget="_blank">(.*?)</a>',response.text):
-                address1 = re.search('onclick="clickLog\(\'from=fcpc_shangpu_detail_jichuxinxi@name=1\'\)"\starget="_blank">(.*?)</a>',response.text).group(1)
-            else:
-                address1 = ''
-            if re.search('onclick="clickLog\(\'from=fcpc_shangpu_detail_jichuxinxi@name=2\'\)"\starget="_blank">(.*?)</a>',response.text):
-                address2 = re.search('onclick="clickLog\(\'from=fcpc_shangpu_detail_jichuxinxi@name=2\'\)"\starget="_blank">(.*?)</a>',response.text).group(1)
-            else:
-                address2 = ''
-            if re.search('<span\sclass="house_basic_title_content_item3\sxxdz-des">\s*(.*?)\s*</span>',response.text):
-                address3 = re.search('<span\sclass="house_basic_title_content_item3\sxxdz-des">\s*(.*?)\s*</span>',response.text).group(1)
-            else:
-                address3 = ''
-            item['address'] = (address1+ ',' + address2 +','+ address3).replace('&nbsp','' )
+        if response.status == 200:
+            if re.findall(r'该页面可能被删除、转移或暂时不可用', response.text) == []:
+                item['is_ok'] = '1'
+                item['id'] = re.search(
+                    'http(s)*://cd.58.com/shangpu/(.*)x.shtml',
+                    response.url).group(2)
 
-            item['depth'] = re.search('深:</span>\s*<span\sclass="house_basic_title_content_item2">\s(.*?)m\s</span>',response.text).group(1)
-            item['height'] = re.search('高:</span>\s*<span\sclass="house_basic_title_content_item2">\s(.*?)m\s</span>',response.text).group(1)
-            item['floor'] = re.search('层:</span>\s*<span\sclass="house_basic_title_content_item2">\s*(.*?)\s*</span>',response.text).group(1)
-            item['shop_type'] = re.search('onclick="clickLog\(\'from=fcpc_shangpu_detail_jichuxinxi@name=4\'\)">(.*?)</a>',response.text).group(1)
-            item['store_status'] = re.search('态:</span>\s*<span\sclass="house_basic_title_content_item3">\s*(.*?)\s*</span>',response.text).group(1)
-            business_industry = re.search('历史经营:</span>\s*<span class="house_basic_title_content_item3">\s*(.*?)\s*-&nbsp;(.*?)\s*</span>\s*</li>',response.text)
-            if business_industry is not None:
-                item['business_industry'] = business_industry.group(1) + ',' + business_industry.group(2)
-            elif  re.search('历史经营:</span>\s*<span class="house_basic_title_content_item3">\s*(.*?)\s*</span>',response.text) is not None:
-                item['business_industry'] = re.search('历史经营:</span>\s*<span class="house_basic_title_content_item3">\s*(.*?)\s*</span>',response.text).group(1)
-            else:
-                item['business_industry'] = '暂无'
-            item['payment_method'] = re.search('付款方式:</span>\s*<span\sclass="house_basic_title_content_item3">(.*?)</span>\s*',response.text).group(1)
-            item['lease_mode'] = re.search('租约方式:</span>\s*<span\sclass="house_basic_title_content_item3">(.*?)</span>',response.text).group(1)
-            if re.search('"baidulat":"(.*?)"',response.text) is not None:
-                item['lat'] = re.search('"baidulat":"(.*?)"',response.text).group(1)
-            else:
-                item['lat'] = ''
-            if re.search('"baidulon":"(.*?)"',response.text) is not None:
-                item['lng'] = re.search('"baidulon":"(.*?)"',response.text).group(1)
-            else:
-                item['lng'] = ''
-            content = response.xpath('//*[@id="generalSound"]')
-            if content.extract()!= []:
-                item['content'] = content.xpath('string(.)').extract()[0].replace(' ','').replace('\n','').replace('\t','')
-            else:
-                item['content'] = ''
-            yield item
-        except Exception as e:
-            print(e)
+                item['monthly_rent'] = re.search(
+                    r'<span\sclass="house_basic_title_money_num">(.*?)</span>',
+                    response.text).group(1)
+
+                item['acreage'] = re.search(r'(\d*)', response.xpath(
+                    '/html/body/div[4]/div[2]/div[2]/ul/li[1]/span[2]/text()').extract_first()).group(1)
+
+                item['shop_type'] = response.xpath(
+                    '/html/body/div[4]/div[2]/div[2]/ul/li[1]/span[4]/a/text()').extract_first()
+
+                item['floor'] = response.xpath(
+                    '/html/body/div[4]/div[2]/div[2]/ul/li[2]/span[2]/text()').extract_first().strip()
+
+                norms = response.xpath(
+                    '/html/body/div[4]/div[2]/div[2]/ul/li[2]/span[4]/text()').extract_first().strip()
+                if norms != '暂无':
+                    re_norms = re.search(r'面宽(.*?)m.*?进深(.*?)m.*?层高(.*?)m.*?', norms)
+                    item['width'], item['depth'], item['height'] = re_norms.group(1), re_norms.group(2), re_norms.group(3)
+                else:
+                    item['width'], item['depth'], item['height'] = 0, 0, 0
+
+                item['store_status'] = response.xpath(
+                    '/html/body/div[4]/div[2]/div[2]/ul/li[3]/span[2]/text()').extract_first().strip()
+
+                item['payment_method'] = response.xpath(
+                    '/html/body/div[4]/div[2]/div[2]/ul/li[3]/span[4]/text()').extract_first().strip()
+
+                business_industry = response.xpath(
+                    '/html/body/div[4]/div[2]/div[2]/ul/li[4]/span[2]/text()').extract_first().strip()
+                if business_industry != '':
+                    item['business_industry'] = business_industry
+                else:
+                    item['business_industry'] = '暂无'
+
+                item['lease_mode'] = response.xpath(
+                    '/html/body/div[4]/div[2]/div[2]/ul/li[4]/span[4]/text()').extract_first().strip()
+
+                address = []
+                address1 = response.xpath('/html/body/div[4]/div[2]/div[2]/ul/li[6]/a[1]/text()').extract_first()
+                address2 = response.xpath('/html/body/div[4]/div[2]/div[2]/ul/li[6]/a[2]/text()').extract_first()
+                address3 = response.xpath('/html/body/div[4]/div[2]/div[2]/ul/li[6]/span[2]/text()').extract_first().strip().replace('\xa0', '')
+                if address1 != None:
+                    address.append(address1)
+                if address2 != None:
+                    address.append(address2)
+                if address3 != None:
+                    address.append(address3)
+                item['address'] = ','.join(address)
+
+                if re.search('"baidulat":"(.*?)"', response.text) is not None:
+                    item['lat'] = re.search(
+                        '"baidulat":"(.*?)"', response.text).group(1)
+                else:
+                    item['lat'] = ''
+                if re.search('"baidulon":"(.*?)"', response.text) is not None:
+                    item['lng'] = re.search(
+                        '"baidulon":"(.*?)"', response.text).group(1)
+                else:
+                    item['lng'] = ''
+                content = response.xpath('//*[@id="generalSound"]')
+                item['content'] = content.xpath('string(.)').extract()[0].replace(
+                    ' ', '').replace('\n', '').replace('\t', '').replace('\xa0', '')
+                yield item
+        else:
             item['is_ok'] = '2'
             item['monthly_rent'] = ''
             item['acreage'] = ''

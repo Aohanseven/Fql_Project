@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/spiders/shop_spdier.py" line="137" />
+    <bookmark url="file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/spiders/shop_spdier.py" line="109" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0455948d-4c7f-42d8-9978-cb43d9b15f4c" name="Default" comment="新的测试功能">
-      <change afterPath="$PROJECT_DIR$/get_md5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/pipelines.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spider/apartment/download_image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/spiders/shop_spdier.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/spiders/shop_spdier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/spiders/url_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/spiders/url_spider.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scrapys/Anjuke/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapys/Anjuke/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scrapys/Wuba/Wuba/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapys/Wuba/Wuba/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scrapys/Wuba/Wuba/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapys/Wuba/Wuba/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scrapys/Wuba/Wuba/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapys/Wuba/Wuba/middlewares.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scrapys/Wuba/Wuba/spiders/data_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapys/Wuba/Wuba/spiders/data_spider.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scrapys/Wuba/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapys/Wuba/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_code/targ.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_code/targ.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_code/temp.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_code/temp.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_md5.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jupyter_code/Untitled1.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/jupyter_code/公司端口统计.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_code/公司端口统计.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_code/自动发布系统.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_code/自动发布系统.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jupyter_code/公司网络发布统计.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_code/公司网络发布统计.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/get_ipoxy.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/get_ipoxy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/zhengce_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/zhengce_image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/agent_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider/apartment/apartment_spider.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/units/Fql_units/text_fql.py" beforeDir="false" afterPath="$PROJECT_DIR$/units/Fql_units/text_fql.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,12 +68,17 @@
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
     <option name="GROUP_SCHEMA" value="true" />
     <option name="GROUP_CONTENTS" value="false" />
     <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="Scrapys" />
@@ -82,101 +88,93 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/get_ipoxy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="101">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#0#16#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/zhengce_image.py">
+        <entry file="file://$PROJECT_DIR$/Scrapys/Wuba/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spider/agent_spider.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jupyter_code/自动发布系统.ipynb">
+        <entry file="file://$PROJECT_DIR$/jupyter_code/公司网络发布统计.ipynb">
           <provider selected="true" editor-type-id="jupyter-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/units/Fql_units/text_fql.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Scrapys/Wuba/Wuba/spiders/data_spider.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+              <caret line="83" column="13" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
               <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/get_md5.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="46" lean-forward="true" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#24#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/selenium_text/ceshi.py">
+        <entry file="file://$PROJECT_DIR$/../Spider/Lib/site-packages/twisted/internet/task.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="91">
+              <caret line="671" selection-start-line="671" selection-end-line="671" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scrapys/Chengdu_News/Chengdu_News/pipelines.py">
+        <entry file="file://$PROJECT_DIR$/../Spider/Lib/site-packages/twisted/internet/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1031">
-              <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+            <state relative-caret-position="70">
+              <caret line="888" selection-start-line="888" selection-end-line="888" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scrapys/Chengdu_News/Chengdu_News/settings.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/Scrapys/Wuba/Wuba/middlewares.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="539">
+              <caret line="136" selection-start-line="136" selection-end-line="136" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/store_rent_list.py">
+        <entry file="file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+            <state relative-caret-position="410">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Scrapys/Wuba/Wuba/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="94" column="13" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/spiders/agent_spdier.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
               <folding>
-                <element signature="e#0#14#0" expanded="true" />
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -219,6 +217,7 @@
       <find>东升</find>
       <find>图</find>
       <find>in</find>
+      <find>data</find>
     </findStrings>
     <replaceStrings>
       <replace>pymsql</replace>
@@ -252,15 +251,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/selenium_text/selenium_fangchan.py" />
-        <option value="$PROJECT_DIR$/TB.py" />
-        <option value="$PROJECT_DIR$/anjuke_chuzu/build/lib/Anjuke/spiders/shop_spdier.py" />
-        <option value="$PROJECT_DIR$/image_qushuiying.py" />
-        <option value="$PROJECT_DIR$/anjuke_shop_spider.py" />
-        <option value="$PROJECT_DIR$/fangqianli_data/Wuba/items.py" />
-        <option value="$PROJECT_DIR$/fangqianli_data/Wuba/spiders/data_spider.py" />
-        <option value="$PROJECT_DIR$/fangqianli_data/Wuba/pipelines.py" />
-        <option value="$PROJECT_DIR$/fangqianli_data/fangqianli_data/items.py" />
         <option value="$PROJECT_DIR$/fangqianli_data/fangqianli_data/spiders/url_spider.py" />
         <option value="$PROJECT_DIR$/fangqianli_data/fangqianli_data/spiders/data_spider.py" />
         <option value="$PROJECT_DIR$/fangqianli_data/fangqianli_data/pipelines.py" />
@@ -273,7 +263,6 @@
         <option value="$PROJECT_DIR$/Anjuke/Anjuke/settings.py" />
         <option value="$PROJECT_DIR$/Anjuke/Anjuke/spiders/url_spider.py" />
         <option value="$PROJECT_DIR$/Anjuke/Anjuke/spiders/shop_spdier.py" />
-        <option value="$PROJECT_DIR$/text.py" />
         <option value="$PROJECT_DIR$/image——download.py" />
         <option value="$PROJECT_DIR$/jupyter_code/LIANJIA .ipynb" />
         <option value="$PROJECT_DIR$/Fql_zu/main.py" />
@@ -286,31 +275,41 @@
         <option value="$PROJECT_DIR$/units/Fql_units/run.py" />
         <option value="$PROJECT_DIR$/selenium_text/ceshi.py" />
         <option value="$PROJECT_DIR$/jupyter_code/公司端口统计.ipynb" />
-        <option value="$PROJECT_DIR$/models/get_ipoxy.py" />
         <option value="$PROJECT_DIR$/models/store_rent_list.py" />
-        <option value="$PROJECT_DIR$/wechat/get_qunInfo.py" />
         <option value="$PROJECT_DIR$/wechat/get_msg.py" />
-        <option value="$PROJECT_DIR$/units/Fql_units/text_fql.py" />
         <option value="$PROJECT_DIR$/spider.py" />
         <option value="$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/items.py" />
         <option value="$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/spiders/url_spider.py" />
         <option value="$PROJECT_DIR$/Scrapys/Wuba/Wuba/items.py" />
-        <option value="$PROJECT_DIR$/Scrapys/Anjuke/main.py" />
         <option value="$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/pipelines.py" />
-        <option value="$PROJECT_DIR$/Scrapys/Wuba/main.py" />
         <option value="$PROJECT_DIR$/Scrapys/Wuba/Wuba/spiders/agent_spider.py" />
         <option value="$PROJECT_DIR$/Scrapys/Wuba/Wuba/pipelines.py" />
         <option value="$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/spiders/agent_spdier.py" />
         <option value="$PROJECT_DIR$/spider/agent_spider.py" />
         <option value="$PROJECT_DIR$/get_md5.py" />
+        <option value="$PROJECT_DIR$/download_image.py" />
+        <option value="$PROJECT_DIR$/Scrapys/Anjuke/main.py" />
+        <option value="$PROJECT_DIR$/spider/apartment/download_image.py" />
+        <option value="$PROJECT_DIR$/text.py" />
+        <option value="$PROJECT_DIR$/models/zhengce_image.py" />
+        <option value="$PROJECT_DIR$/Text/1.py" />
+        <option value="$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/spiders/shop_spdier.py" />
+        <option value="$PROJECT_DIR$/units/Fql_units/text_fql.py" />
+        <option value="$PROJECT_DIR$/spider/apartment/ajk_apartment.py" />
+        <option value="$PROJECT_DIR$/wechat/get_qunInfo.py" />
+        <option value="$PROJECT_DIR$/models/get_ipoxy.py" />
+        <option value="$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/settings.py" />
+        <option value="$PROJECT_DIR$/Scrapys/Wuba/Wuba/middlewares.py" />
+        <option value="$PROJECT_DIR$/Scrapys/Wuba/main.py" />
+        <option value="$PROJECT_DIR$/Scrapys/Wuba/Wuba/spiders/data_spider.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1358" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="386" />
+    <option name="y" value="106" />
+    <option name="width" value="983" />
+    <option name="height" value="521" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -320,7 +319,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -331,29 +329,72 @@
             <path>
               <item name="Fql_Project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="E:\Fql_Project" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="jupyter_code" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="Fql_Project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="E:\Fql_Project" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="models" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="Fql_Project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="E:\Fql_Project" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="selenium_text" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Scrapys" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Fql_Project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="E:\Fql_Project" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Scrapys" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Anjuke" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Fql_Project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="E:\Fql_Project" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Scrapys" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Anjuke" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Anjuke" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Fql_Project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="E:\Fql_Project" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Scrapys" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Anjuke" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Anjuke" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="spiders" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Fql_Project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="E:\Fql_Project" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Scrapys" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Wuba" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Fql_Project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="E:\Fql_Project" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Scrapys" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Wuba" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Wuba" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Fql_Project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="E:\Fql_Project" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Scrapys" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Wuba" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Wuba" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="spiders" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Fql_Project" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="E:\Fql_Project" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Text" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/jupyter_code" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
@@ -367,18 +408,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Fql_Project\jupyter_code" />
       <recent name="E:\Scrapys\Fql_zu\Fql_zu" />
       <recent name="E:\Scrapys" />
       <recent name="$PROJECT_DIR$/Anjuke/Anjuke" />
       <recent name="$PROJECT_DIR$/shops_spider/shops_spider" />
-      <recent name="$PROJECT_DIR$/data_58shop/data_58shop" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Fql_Project\Text" />
+      <recent name="E:\Fql_Project\spider\apartment" />
       <recent name="E:\Fql_Project\wechat" />
       <recent name="E:\Fql_Project\units\Fql_units" />
       <recent name="E:\Fql_Project\Scrapys" />
-      <recent name="E:\Scrapys\Anjuke" />
-      <recent name="E:\Scrapys\Anjuke\Anjuke" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -393,8 +434,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.get_md5">
-    <configuration name="agent_spider" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.main (2)">
+    <configuration name="ajk_apartment" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Scrapys" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -402,12 +443,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spider" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spider/apartment" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spider/agent_spider.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spider/apartment/ajk_apartment.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="data_spider" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Scrapys" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scrapys/Wuba/Wuba/spiders" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scrapys/Wuba/Wuba/spiders/data_spider.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -438,28 +501,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="get_md5" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Scrapys" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/get_md5.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Scrapys" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -468,12 +509,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scrapys/Anjuke" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scrapys/Chengdu_News" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scrapys/Anjuke/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scrapys/Chengdu_News/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -553,18 +594,18 @@
     <list>
       <item itemvalue="Python.text_fql" />
       <item itemvalue="Python.get_ipoxy" />
-      <item itemvalue="Python.agent_spider" />
+      <item itemvalue="Python.ajk_apartment" />
       <item itemvalue="Python.main (1)" />
       <item itemvalue="Python.main (2)" />
-      <item itemvalue="Python.get_md5" />
+      <item itemvalue="Python.data_spider" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.get_md5" />
-        <item itemvalue="Python.agent_spider" />
         <item itemvalue="Python.main (2)" />
+        <item itemvalue="Python.data_spider" />
         <item itemvalue="Python.get_ipoxy" />
         <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.ajk_apartment" />
       </list>
     </recent_temporary>
   </component>
@@ -586,6 +627,11 @@
       <workItem from="1556077875442" duration="13324000" />
       <workItem from="1556156387116" duration="3587000" />
       <workItem from="1556250097115" duration="19388000" />
+      <workItem from="1556329097289" duration="19721000" />
+      <workItem from="1556502844903" duration="15566000" />
+      <workItem from="1556586217823" duration="19267000" />
+      <workItem from="1556675042878" duration="15457000" />
+      <workItem from="1557190625297" duration="18060000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1553674006339</created>
@@ -749,7 +795,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70235000" />
+    <option name="totallyTimeSpent" value="158306000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -761,20 +807,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4903047" visible="true" weight="0.24253732" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4903047" visible="true" weight="0.1482602" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5096953" side_tool="true" weight="0.32348484" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4977307" weight="0.32786885" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8976546" visible="true" weight="0.26789588" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.7164179" weight="0.48481563" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.89334345" visible="true" weight="0.45409837" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.7140696" weight="0.45409837" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49107143" weight="0.3229508" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.102345414" side_tool="true" weight="0.26789588" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.5751488" weight="0.2358804" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.10665658" side_tool="true" weight="0.30983606" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.5751488" weight="0.23442623" />
       <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.49848714" weight="0.32786885" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.64220876" weight="0.40655738" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="11" sideWeight="0.4969697" weight="0.32993197" />
@@ -787,8 +834,8 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Data View" order="3" weight="0.32954547" />
-      <window_info anchor="right" id="Database" order="4" weight="0.32954547" />
-      <window_info anchor="right" id="SciView" order="5" />
+      <window_info anchor="right" id="Database" order="4" weight="0.3290469" />
+      <window_info anchor="right" id="SciView" order="5" weight="0.32980332" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -929,26 +976,6 @@
           <option name="timeStamp" value="194" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/pipelines.py</url>
-          <line>119</line>
-          <option name="timeStamp" value="264" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/pipelines.py</url>
-          <line>79</line>
-          <option name="timeStamp" value="265" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/pipelines.py</url>
-          <line>80</line>
-          <option name="timeStamp" value="266" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/pipelines.py</url>
-          <line>87</line>
-          <option name="timeStamp" value="267" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Fql_zu/Fql_zu/pipelines.py</url>
           <line>62</line>
           <option name="timeStamp" value="270" />
@@ -1053,6 +1080,361 @@
           <line>35</line>
           <option name="timeStamp" value="296" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/download_image.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="313" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/download_image.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="315" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/download_image.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="316" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/download_image.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="317" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/download_image.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="318" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/download_image.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="337" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/download_image.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="340" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/download_image.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="341" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/download_image.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="342" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/download_image.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="343" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/download_image.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="344" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/download_image.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="345" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/download_image.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="346" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/download_image.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="347" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/download_image.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="348" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/download_image.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="349" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Text/text.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="375" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Text/text.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="377" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Text/text.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="378" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Text/text.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="379" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Text/text.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="380" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Text/text.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="381" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Text/text.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="382" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Text/text.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="385" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Text/text.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="386" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Text/text.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="387" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Text/text.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="391" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Text/text.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="392" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Text/text.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="393" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Text/text.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="394" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Text/text.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="395" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Text/text.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="397" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Text/text.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="398" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Text/text.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="400" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Text/text.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="401" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/spiders/shop_spdier.py</url>
+          <line>108</line>
+          <option name="timeStamp" value="415" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/spiders/shop_spdier.py</url>
+          <line>100</line>
+          <option name="timeStamp" value="417" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/spiders/shop_spdier.py</url>
+          <line>98</line>
+          <option name="timeStamp" value="418" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/spiders/shop_spdier.py</url>
+          <line>96</line>
+          <option name="timeStamp" value="419" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/spiders/shop_spdier.py</url>
+          <line>101</line>
+          <option name="timeStamp" value="420" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="421" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="422" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="423" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="424" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="425" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="426" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>53</line>
+          <option name="timeStamp" value="427" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="428" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>56</line>
+          <option name="timeStamp" value="429" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>59</line>
+          <option name="timeStamp" value="432" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>58</line>
+          <option name="timeStamp" value="433" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>60</line>
+          <option name="timeStamp" value="434" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>61</line>
+          <option name="timeStamp" value="435" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>62</line>
+          <option name="timeStamp" value="436" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>63</line>
+          <option name="timeStamp" value="437" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>64</line>
+          <option name="timeStamp" value="438" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>65</line>
+          <option name="timeStamp" value="439" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>66</line>
+          <option name="timeStamp" value="440" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>67</line>
+          <option name="timeStamp" value="441" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>68</line>
+          <option name="timeStamp" value="442" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>69</line>
+          <option name="timeStamp" value="443" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>54</line>
+          <option name="timeStamp" value="444" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py</url>
+          <line>57</line>
+          <option name="timeStamp" value="445" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Scrapys/Wuba/Wuba/spiders/data_spider.py</url>
+          <line>80</line>
+          <option name="timeStamp" value="461" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Scrapys/Wuba/Wuba/spiders/data_spider.py</url>
+          <line>85</line>
+          <option name="timeStamp" value="463" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Scrapys/Wuba/Wuba/spiders/data_spider.py</url>
+          <line>90</line>
+          <option name="timeStamp" value="468" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Scrapys/Wuba/Wuba/spiders/data_spider.py</url>
+          <line>81</line>
+          <option name="timeStamp" value="469" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Scrapys/Wuba/Wuba/spiders/data_spider.py</url>
+          <line>82</line>
+          <option name="timeStamp" value="470" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Scrapys/Wuba/Wuba/spiders/data_spider.py</url>
+          <line>83</line>
+          <option name="timeStamp" value="471" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Scrapys/Wuba/Wuba/spiders/data_spider.py</url>
+          <line>88</line>
+          <option name="timeStamp" value="472" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Scrapys/Wuba/Wuba/spiders/data_spider.py</url>
+          <line>89</line>
+          <option name="timeStamp" value="473" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -1069,168 +1451,26 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Fql_Project$text_fql.coverage" NAME="text_fql Coverage Results" MODIFIED="1555741196951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/units/Fql_units" />
-    <SUITE FILE_PATH="coverage/Fql_Project$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1556094714285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scrapys/Wuba" />
+    <SUITE FILE_PATH="coverage/Fql_Project$text_fql.coverage" NAME="text_fql Coverage Results" MODIFIED="1556590663105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/units/Fql_units" />
+    <SUITE FILE_PATH="coverage/Fql_Project$text.coverage" NAME="text Coverage Results" MODIFIED="1556356765763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Fql_Project$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1557223571099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scrapys/Wuba" />
     <SUITE FILE_PATH="coverage/Fql_Project$agent_spider.coverage" NAME="agent_spider Coverage Results" MODIFIED="1556273599365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
     <SUITE FILE_PATH="coverage/Fql_Project$ceshi.coverage" NAME="ceshi Coverage Results" MODIFIED="1555727075424" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/selenium_text" />
-    <SUITE FILE_PATH="coverage/Fql_Project$main.coverage" NAME="main Coverage Results" MODIFIED="1556074932594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scrapys/Chengdu_News" />
-    <SUITE FILE_PATH="coverage/Fql_Project$get_md5.coverage" NAME="get_md5 Coverage Results" MODIFIED="1556276203262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Fql_Project$download_image.coverage" NAME="download_image Coverage Results" MODIFIED="1556336429983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Fql_Project$ajk_apartment.coverage" NAME="ajk_apartment Coverage Results" MODIFIED="1556695815849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/apartment" />
+    <SUITE FILE_PATH="coverage/Fql_Project$shop_spdier.coverage" NAME="shop_spdier Coverage Results" MODIFIED="1556516593458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/spiders" />
+    <SUITE FILE_PATH="coverage/Fql_Project$data_spider.coverage" NAME="data_spider Coverage Results" MODIFIED="1557223564667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scrapys/Wuba/Wuba/spiders" />
+    <SUITE FILE_PATH="coverage/Fql_Project$download_image__1_.coverage" NAME="download_image (1) Coverage Results" MODIFIED="1556354910409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/apartment" />
+    <SUITE FILE_PATH="coverage/Fql_Project$1.coverage" NAME="1 Coverage Results" MODIFIED="1556509805402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Text" />
+    <SUITE FILE_PATH="coverage/Fql_Project$main.coverage" NAME="main Coverage Results" MODIFIED="1556521671868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scrapys/Anjuke" />
+    <SUITE FILE_PATH="coverage/Fql_Project$get_md5.coverage" NAME="get_md5 Coverage Results" MODIFIED="1556334313803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Fql_Project$get_msg.coverage" NAME="get_msg Coverage Results" MODIFIED="1555659747627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wechat" />
-    <SUITE FILE_PATH="coverage/Fql_Project$get_ipoxy.coverage" NAME="get_ipoxy Coverage Results" MODIFIED="1556094033459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
-    <SUITE FILE_PATH="coverage/Fql_Project$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1556093156983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scrapys/Anjuke" />
+    <SUITE FILE_PATH="coverage/Fql_Project$get_ipoxy.coverage" NAME="get_ipoxy Coverage Results" MODIFIED="1557215485389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
+    <SUITE FILE_PATH="coverage/Fql_Project$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1557190685459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scrapys/Chengdu_News" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/units/Fql_units/.pytest_cache/README.md" />
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/unittest/__init__.pyi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6300">
-          <caret line="307" column="24" selection-start-line="307" selection-start-column="24" selection-end-line="307" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Untitled.ipynb" />
-    <entry file="file://$PROJECT_DIR$/jupyter_code/公司端口统计.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jupyter_code/公司网络发布统计.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.ipynb_checkpoints/Untitled-checkpoint.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Spider/Lib/site-packages/itchat/storage/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Spider/Lib/site-packages/itchat/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/get_qunInfo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-          <folding>
-            <element signature="e#25#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Spider/Lib/site-packages/itchat/content.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wechat/send_qunInfo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
-          <caret line="56" column="23" selection-start-line="56" selection-start-column="15" selection-end-line="56" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider.py" />
-    <entry file="file://$PROJECT_DIR$/wechat/get_msg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Spider/Lib/site-packages/itchat/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9471">
-          <caret line="456" column="64" selection-start-line="456" selection-start-column="56" selection-end-line="456" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scrapys/Chengdu_News/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="27" lean-forward="true" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Spider/Lib/site-packages/scrapy/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Spider/Lib/site-packages/scrapy/spiders/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scrapys/community_spider/community_spider/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Spider/Lib/site-packages/redis/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Spider/Lib/site-packages/redis/connection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2016">
-          <caret line="104" column="28" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/selenium_text/selenium_fangchan.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="83" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="83" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scrapys/community_spider/community_spider/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="42" selection-end-column="34" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scrapys/Wuba/Wuba/spiders/agent_spider.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1242,13 +1482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scrapys/Anjuke/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Scrapys/Wuba/Wuba/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2478">
@@ -1256,50 +1489,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/spiders/agent_spdier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Scrapys/Anjuke/scrapy.cfg">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/spiders/shop_spdier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="50" column="18" selection-start-line="50" selection-end-line="51" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scrapys/Wuba/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scrapys/Wuba/Wuba/items.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="40" column="15" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scrapys/Wuba/Wuba/spiders/data_spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="29" column="30" selection-start-line="23" selection-start-column="3" selection-end-line="29" selection-end-column="30" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1310,13 +1506,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="819">
           <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-41">
-          <caret line="124" column="8" lean-forward="true" selection-start-line="124" selection-start-column="8" selection-end-line="130" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1341,16 +1530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/store_rent_list.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Spider/Lib/site-packages/pymysql/connections.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1358,29 +1537,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/get_ipoxy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/selenium_text/ceshi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Scrapys/Chengdu_News/Chengdu_News/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1031">
+        <state relative-caret-position="1134">
           <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
         </state>
       </provider>
@@ -1388,45 +1547,258 @@
     <entry file="file://$PROJECT_DIR$/Scrapys/Chengdu_News/Chengdu_News/settings.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/zhengce_image.py">
+    <entry file="file://$PROJECT_DIR$/jupyter_code/Untitled1.ipynb" />
+    <entry file="file://$PROJECT_DIR$/2.jpg" />
+    <entry file="file://$PROJECT_DIR$/4.jpg" />
+    <entry file="file://$PROJECT_DIR$/../Spider/Lib/site-packages/PIL/Image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+        <state relative-caret-position="41643">
+          <caret line="1988" selection-start-line="1988" selection-end-line="1988" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/python37/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6510">
+          <caret line="311" selection-start-line="311" selection-end-line="311" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/spiders/shop_spdier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2562">
+          <caret line="126" column="32" selection-start-line="126" selection-start-column="32" selection-end-line="126" selection-end-column="32" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#24#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider/agent_spider.py">
+    <entry file="file://$PROJECT_DIR$/wechat/get_msg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="273">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jupyter_code/自动发布系统.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
+    <entry file="file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2247">
+          <caret line="111" column="32" selection-start-line="111" selection-start-column="32" selection-end-line="111" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapys/Anjuke/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/units/Fql_units/text_fql.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="215">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_md5.py">
+    <entry file="file://$PROJECT_DIR$/spider/apartment/apartment_spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="46" lean-forward="true" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+        <state relative-caret-position="320">
+          <caret line="41" column="24" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="41" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/apartment/ajk_apartment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="79" column="15" lean-forward="true" selection-start-line="79" selection-start-column="15" selection-end-line="79" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selenium_text/ceshi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selenium_text/selenium_fangchan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2184">
+          <caret line="16" column="83" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="83" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/apartment/download_image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/store_rent_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/zhengce_image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jupyter_code/Untitled.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jupyter_code/公司端口统计.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wechat/get_qunInfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="34" column="79" selection-start-line="34" selection-start-column="78" selection-end-line="34" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jupyter_code/自动发布系统.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Text/1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Text/text.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapys/Chengdu_News/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jupyter_code/水印处理.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jupyter_code/房千里租房发布.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/spiders/agent_spdier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jupyter_code/公司网络发布统计.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapys/Anjuke/Anjuke/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapys/Wuba/Wuba/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="94" column="13" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapys/Wuba/Wuba/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/get_ipoxy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Spider/Lib/site-packages/twisted/internet/task.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="671" selection-start-line="671" selection-end-line="671" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Spider/Lib/site-packages/twisted/internet/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="888" selection-start-line="888" selection-end-line="888" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapys/Wuba/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapys/Wuba/Wuba/spiders/data_spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="83" column="13" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
           </folding>
         </state>
       </provider>

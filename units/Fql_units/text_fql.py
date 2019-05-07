@@ -10,7 +10,6 @@ def get_token():
     data = {
         "corpid": 'ww1bfe0036f1ec1e74',
         "corpsecret": '-92Yv4C7KaU4AUeDRm1SoRxQy44mVTQKZj6lxZfp5lA'
-
     }
     r = requests.get(url=url, params=data, verify=False)
     token = r.json()['access_token']
@@ -50,9 +49,10 @@ def login(browser):
     browser.find_element_by_xpath('//*[@id="loginbtn"]').click()
     time.sleep(2)
     if browser.find_element_by_link_text('16608940910'):
-        return 0
+        is_ok = 0
     else:
-        return 1
+        is_ok = 1
+    return is_ok
 
 
 def ai_select(browser):
@@ -128,6 +128,7 @@ if __name__ == "__main__":
     testunit.addTest(TestFql("test_ai_select"))
     result = runner.run(testunit)
     failures = result.failures
+    print(failures)
     msg = []
     if failures != []:
         for i, k in zip(failures,range(len(failures))):

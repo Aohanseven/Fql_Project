@@ -1,21 +1,35 @@
-import os
-import requests
+import threading
 import redis
+import requests
 import time
 
 
-def get_ip():
+def get_ipoxy(order):
+    s = requests.session()
     redis_db = redis.Redis(host='127.0.0.1', port=6379, db=9)
     while True:
-        orders = ["0f95da88048caaa92a1a2dd703db9794", '229fe5fcc9902d1deb61ed09162db48c']
-        Apiurls = ["http://api.ip.data5u.com/dynamic/get.html?order=" + order for order in orders]
-        ips = [requests.get(apiUrl).content.decode().strip() for apiUrl in Apiurls]
-        for ip in ips:
+        apiurl = "http://api.ip.data5u.com/dynamic/get.html?order=" + order
+        try:
+            ip = s.get(apiurl).text.strip()
             if ip != 'too many requests':
                 redis_db.setex(ip, 30, 0)
-        print(ips)
-        time.sleep(10)
+                print(ip)
+                time.sleep(6)
+        except BaseException:
+            ip = s.get(apiurl).text.strip()
+            if ip != 'too many requests':
+                redis_db.setex(ip, 30, 0)
+                print(ip)
+                time.sleep(6)
 
 
 if __name__ == '__main__':
-    get_ip()
+
+    t1 = threading.Thread(
+        target=get_ipoxy, args=(
+            "0f95da88048caaa92a1a2dd703db9794",))
+    t2 = threading.Thread(
+        target=get_ipoxy, args=(
+            "229fe5fcc9902d1deb61ed09162db48c",))
+    t1.start()
+    t2.start()
