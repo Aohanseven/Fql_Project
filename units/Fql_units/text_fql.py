@@ -5,6 +5,7 @@ import time
 import re
 import json
 
+
 def get_token():
     url = "https://qyapi.weixin.qq.com/cgi-bin/gettoken"
     data = {
@@ -16,7 +17,7 @@ def get_token():
     return token
 
 
-def send_msg(token,content):
+def send_msg(token, content):
     url = "https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token=%s" % token
     data = {
         "touser": '@all',                                # 企业号中的用户帐号，账号名
@@ -31,8 +32,6 @@ def send_msg(token,content):
     return r.text
 
 
-
-
 def get_web():
     r = requests.get('http://fangqianli.com')
     return r.status_code
@@ -42,7 +41,8 @@ def login(browser):
     browser = browser
     browser.find_element_by_xpath('//*[@id="DengL"]').click()
     time.sleep(1)
-    browser.find_element_by_xpath('//*[@id="username"]').send_keys('16608940910')
+    browser.find_element_by_xpath(
+        '//*[@id="username"]').send_keys('16608940910')
     time.sleep(1)
     browser.find_element_by_xpath('//*[@id="psw"]').send_keys('a2577811')
     time.sleep(1)
@@ -59,37 +59,46 @@ def ai_select(browser):
     browser = browser
     browser.find_element_by_xpath('//*[@id="DengL"]').click()
     time.sleep(1)
-    browser.find_element_by_xpath('//*[@id="username"]').send_keys('16608940910')
+    browser.find_element_by_xpath(
+        '//*[@id="username"]').send_keys('16608940910')
     time.sleep(1)
     browser.find_element_by_xpath('//*[@id="psw"]').send_keys('a2577811')
     time.sleep(1)
     browser.find_element_by_xpath('//*[@id="loginbtn"]').click()
     time.sleep(1)
-    browser.find_element_by_xpath('//*[@id="app"]/div[1]/div/div[2]/div[2]/a').click()
+    browser.find_element_by_xpath(
+        '//*[@id="app"]/div[1]/div/div[2]/div[2]/a').click()
     time.sleep(1)
-    browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[1]/div/div/button').click()
+    browser.find_element_by_xpath(
+        '//*[@id="app"]/div[2]/div[1]/div/div/button').click()
     time.sleep(1)
-    browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/div[1]/ul[1]/li[3]').click()
+    browser.find_element_by_xpath(
+        '//*[@id="app"]/div[2]/div[2]/div/div[1]/ul[1]/li[3]').click()
     time.sleep(1)
-    browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[2]/div/div[1]/ul[2]/li[2]').click()
+    browser.find_element_by_xpath(
+        '//*[@id="app"]/div[2]/div[2]/div/div[1]/ul[2]/li[2]').click()
     time.sleep(1)
-    browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[4]/button[1]').click()
+    browser.find_element_by_xpath(
+        '//*[@id="app"]/div[2]/div[4]/button[1]').click()
     time.sleep(1)
-    browser.find_element_by_xpath('//*[@id="app"]/div[2]/div[5]/div[1]/div[1]/ul/li[1]/span').click()
+    browser.find_element_by_xpath(
+        '//*[@id="app"]/div[2]/div[5]/div[1]/div[1]/ul/li[1]/span').click()
     time.sleep(1)
     now_windows = browser.current_window_handle
     all_windows = browser.window_handles
     for i in all_windows:
         if i != now_windows:
             browser.switch_to_window(i)
-    browser.find_element_by_xpath('//*[@id="mapBox"]/div[4]/div[2]/button').click()
+    browser.find_element_by_xpath(
+        '//*[@id="mapBox"]/div[4]/div[2]/button').click()
     time.sleep(1)
     all_windows = browser.window_handles
     browser.switch_to_window(all_windows[2])
     time.sleep(3)
     is_ok = ''
-    for i in browser.find_elements_by_xpath('//*[@id="app"]/div[2]/section[3]/div[1]/div/div/div[1]'):
-        if i.is_displayed()==False:
+    for i in browser.find_elements_by_xpath(
+            '//*[@id="app"]/div[2]/section[3]/div[1]/div/div/div[1]'):
+        if i.is_displayed() == False:
             is_ok = 1
             break
         else:
@@ -103,9 +112,9 @@ class TestFql(unittest.TestCase):
         self.assertEqual(200, get_web(), msg="主页无法访问")
 
     def setUp(self):
-        self.opt = webdriver.ChromeOptions()
+        self.opt = webdriver.FirefoxOptions()
         self.opt.set_headless()
-        self.browser = webdriver.Chrome('C:/Users/Administrator/Downloads/chromedriver.exe')
+        self.browser = webdriver.Firefox(options=self.opt)
         self.browser.implicitly_wait(30)  # 隐性等待时间为30秒
         self.browser.get('http://fangqianli.com')
 
@@ -128,11 +137,14 @@ if __name__ == "__main__":
     testunit.addTest(TestFql("test_ai_select"))
     result = runner.run(testunit)
     failures = result.failures
-    print(failures)
+    errors = result.errors
     msg = []
     if failures != []:
-        for i, k in zip(failures,range(len(failures))):
-            msg.append('错误{:d}:'.format(k+1) + re.search('msg=\"(.*?)\"', i[1]).group(1))
+        for i in failures:
+            msg.append('failure:' + re.search('msg=\"(.*?)\"', i[1]).group(1))
+    if errors != []:
+        for i in errors:
+            msg.append('error:' + re.search('msg=\"(.*?)\"', i[1]).group(1))
     if msg != []:
         content = ','.join(msg)
         token = get_token()

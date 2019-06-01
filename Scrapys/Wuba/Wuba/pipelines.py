@@ -54,7 +54,7 @@ class URLDBPipeline(object):
             cue.execute(
                 "INSERT INTO shop58_data (id,title,link) VALUES (%s,%s,%s)",
                 (item['id'],
-                 item['title'],
+                    item['title'],
                     item['link']))
             print("insert succes")
         except Exception as e:

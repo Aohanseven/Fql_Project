@@ -5,6 +5,7 @@ import re
 import multiprocessing
 import time
 
+
 class Ajkapartment:
 
     def __init__(self, i):
@@ -55,7 +56,7 @@ class Ajkapartment:
             time.sleep(4)
             req = requests.get(url, headers=self.header)
             imgurls = re.findall(
-                r'<img data-lazy="(.*?)" alt="">',req.text)
+                r'<img data-lazy="(.*?)" alt="">', req.text)
             img_id = re.search(
                 r'http://cd.sp.anjuke.com/shou/(.*)/\?pt=.*', url).group(1)
             if imgurls != []:

@@ -1,10 +1,11 @@
 import threading
+import time
 import redis
 import requests
-import time
 
 
 def get_ipoxy(order):
+
     s = requests.session()
     redis_db = redis.Redis(host='127.0.0.1', port=6379, db=9)
     while True:

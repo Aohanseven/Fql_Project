@@ -14,7 +14,9 @@ class ShopSpdierSpider(scrapy.Spider):
         },
         "DOWNLOADER_MIDDLEWARES": {
             # 'Anjuke.middlewares.ProxyMiddleware': 200,
-            'Anjuke.middlewares.MyUserAgentMiddleware': 300,
+            'scrapy_fake_useragent.middleware.RandomUserAgentMiddleware': 300,
+            'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+
         },
         'DOWNLOAD_DELAY': 4
     }
@@ -45,7 +47,7 @@ class ShopSpdierSpider(scrapy.Spider):
             item['is_ok'] = '1'
 
             item['id'] = re.search(
-                'http://cd.sp.anjuke.com/zu/(.*?)/.*',
+                'http.*://cd.sp.anjuke.com/zu/(.*?)/.*',
                 response.url).group(1)
 
             monthly_rent = response.xpath(
@@ -66,28 +68,30 @@ class ShopSpdierSpider(scrapy.Spider):
             item['floor'] = response.xpath(
                 '//*[@id="fy_info"]/ul[1]/li[4]/span[3]/text()').extract_first().strip()
 
-            norms = re.findall('\d*m', response.xpath(
-                '//*[@id="fy_info"]/ul[1]/li[5]/span[3]/text()').extract_first().strip())
+            norms = response.xpath(
+                '//*[@id="fy_info"]/ul[1]/li[5]/span[3]/text()').extract_first().strip()
 
-            item['width'] = norms[0].strip('m')
-
-            item['height'] = norms[1].strip('m')
-
-            item['depth'] = norms[2].strip('m')
+            if norms != '暂无数据':
+                re_norms = re.search(
+                    r'面宽(.*?)m.*?层高(.*?)m.*?进深(.*?)m.*?', norms)
+                item['width'] = re_norms.group(1)
+                item['height'] = re_norms.group(2)
+                item['depth'] = re_norms.group(3)
+            else:
+                item['width'] = 0
+                item['height'] = 0
+                item['depth'] = 0
 
             item['address'] = response.xpath(
                 '//*[@id="fy_info"]/ul[1]/li[7]/span[3]/text()').extract_first().replace('\n', '').strip('  ').replace(' ', ',')
 
-
             item['store_status'] = response.xpath(
                 '//*[@id="fy_info"]/ul[2]/li[4]/span[3]/text()').extract_first().strip()
 
-            shop_type = response.xpath(
-                '//*[@id="fy_info"]/ul[2]/li[3]/span[3]/text()').extract_first().split('-')
+            item['business_industry'] = response.xpath(
+                '//*[@id="fy_info"]/ul[2]/li[3]/span[3]/text()').extract_first().replace('-临街','')
 
-            item['business_industry'] = shop_type[0]
-
-            item['is_facestreet'] = shop_type[1]
+            item['is_facestreet'] = '临街'
 
             item['people'] = response.xpath(
                 '//*[@id="fy_info"]/ul[2]/li[6]/span[3]/text()').extract_first().strip()
@@ -98,7 +102,10 @@ class ShopSpdierSpider(scrapy.Spider):
 
             data = response.xpath('//*[@id="xzl_desc"]/div')
 
-            item['content'] = data.xpath('string(.)').extract()[0].replace(' ', '').replace('\n', '').replace('\t', '')
+            item['content'] = data.xpath('string(.)').extract()[0].replace(
+                ' ', '').replace(
+                '\n', '').replace(
+                '\t', '')
 
             item['transfer_fee'] = '面议'
 

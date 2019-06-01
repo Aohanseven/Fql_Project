@@ -13,7 +13,9 @@ class AnjukeUrlSpiderSpider(scrapy.Spider):
         },
         "DOWNLOADER_MIDDLEWARES": {
             # 'Anjuke.middlewares.ProxyMiddleware': 200,
-            'Anjuke.middlewares.MyUserAgentMiddleware': 300,
+            'scrapy_fake_useragent.middleware.RandomUserAgentMiddleware': 300,
+            'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+
         },
         'DOWNLOAD_DELAY': 4
     }
@@ -39,7 +41,7 @@ class AnjukeUrlSpiderSpider(scrapy.Spider):
         for title, link in zip(titles, links):
             item['link'] = link
             item['title'] = title
-            item['id'] = int(re.search('http://cd.sp.anjuke.com/zu/(.*?)/.*', link).group(1))
+            item['id'] = int(re.search('http.*://cd.sp.anjuke.com/zu/(.*?)/.*', link).group(1))
             yield item
         next_page = response.xpath(
             '//div[@class="multi-page"]/a[last()]/@href').extract()[0]

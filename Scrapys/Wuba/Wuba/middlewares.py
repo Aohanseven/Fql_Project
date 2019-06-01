@@ -6,7 +6,6 @@
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
-from fake_useragent import UserAgent
 import redis
 
 class WubaSpiderMiddleware(object):
